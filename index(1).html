@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Future Learn</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#0f172a;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    /* NAVBAR */
+
+    nav{
+      width:100%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 8%;
+      background:#111827;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    nav h1{
+      font-size:32px;
+      color:#60a5fa;
+      font-weight:bold;
+    }
+
+    nav ul{
+      display:flex;
+      align-items:center;
+      gap:35px;
+      list-style:none;
+    }
+
+    nav ul li{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:white;
+      font-size:17px;
+      transition:0.3s;
+      font-weight:500;
+    }
+
+    nav ul li a:hover{
+      color:#60a5fa;
+    }
+
+    /* HERO SECTION */
+
+    .hero{
+      min-height:90vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:40px 20px;
+      background:linear-gradient(to right,#1e3a8a,#7c3aed);
+    }
+
+    .hero h2{
+      font-size:60px;
+      margin-bottom:20px;
+      max-width:900px;
+      line-height:1.2;
+    }
+
+    .hero p{
+      font-size:20px;
+      max-width:750px;
+      line-height:1.8;
+      margin-bottom:35px;
+    }
+
+    .hero button{
+      padding:15px 35px;
+      border:none;
+      border-radius:12px;
+      background:white;
+      color:#111827;
+      font-size:18px;
+      font-weight:bold;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .hero button:hover{
+      transform:scale(1.05);
+    }
+
+    /* COURSE SECTION */
+
+    .courses{
+      padding:90px 8%;
+    }
+
+    .title{
+      text-align:center;
+      font-size:42px;
+      margin-bottom:60px;
+      color:#60a5fa;
+    }
+
+    .course-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:35px;
+    }
+
+    .card{
+      background:#1e293b;
+      padding:30px;
+      border-radius:20px;
+      transition:0.4s;
+      box-shadow:0 0 15px rgba(0,0,0,0.3);
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 0 20px rgba(96,165,250,0.4);
+    }
+
+    .card h3{
+      color:#93c5fd;
+      margin-bottom:18px;
+      font-size:24px;
+    }
+
+    .card p{
+      line-height:1.7;
+      margin-bottom:25px;
+      color:#d1d5db;
+    }
+
+    .card button{
+      padding:12px 22px;
+      border:none;
+      border-radius:10px;
+      background:#3b82f6;
+      color:white;
+      cursor:pointer;
+      font-size:15px;
+      transition:0.3s;
+    }
+
+    .card button:hover{
+      background:#2563eb;
+    }
+
+    /* FEATURES */
+
+    .features{
+      padding:90px 8%;
+      background:#111827;
+    }
+
+    .feature-box{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:35px;
+    }
+
+    .feature{
+      background:#1e293b;
+      padding:35px 25px;
+      border-radius:18px;
+      text-align:center;
+      transition:0.3s;
+    }
+
+    .feature:hover{
+      transform:translateY(-8px);
+    }
+
+    .feature h3{
+      margin:18px 0;
+      color:#60a5fa;
+      font-size:24px;
+    }
+
+    .feature p{
+      color:#d1d5db;
+      line-height:1.7;
+    }
+
+    /* FOOTER */
+
+    footer{
+      text-align:center;
+      padding:30px;
+      background:#020617;
+      font-size:15px;
+      color:#cbd5e1;
+    }
+
+    /* MOBILE RESPONSIVE */
+
+    @media(max-width:768px){
+
+      nav{
+        flex-direction:column;
+        gap:20px;
+      }
+
+      nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:20px;
+      }
+
+      .hero h2{
+        font-size:38px;
+      }
+
+      .hero p{
+        width:100%;
+        font-size:17px;
+      }
+
+      .title{
+        font-size:32px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav>
+
+    <h1>FutureLearn</h1>
+
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Courses</a></li>
+      <li><a href="#">Videos</a></li>
+      <li><a href="#">AI Tutor</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <h2>Learn Future Skills With AI</h2>
+
+    <p>
+      Master AI, Cloud Computing, Full Stack Development,
+      UI/UX Design, MERN Stack and Genetic Engineering
+      with theory + video based smart learning platform.
+    </p>
+
+    <button>Start Learning</button>
+
+  </section>
+
+  <!-- COURSES -->
+
+  <section class="courses">
+
+    <h2 class="title">Popular Courses</h2>
+
+    <div class="course-container">
+
+      <div class="card">
+        <h3>🤖 Artificial Intelligence</h3>
+        <p>Learn AI concepts, machine learning and smart applications.</p>
+        <button>Learn More</button>
+      </div>
+
+      <div class="card">
+        <h3>☁️ Cloud Computing</h3>
+        <p>Understand AWS, Azure and cloud deployment basics.</p>
+        <button>Learn More</button>
+      </div>
+
+      <div class="card">
+        <h3>💻 Full Stack Development</h3>
+        <p>Frontend + Backend complete web development course.</p>
+        <button>Learn More</button>
+      </div>
+
+      <div class="card">
+        <h3>🎨 UI/UX Design</h3>
+        <p>Learn Figma, wireframes and modern UI designing.</p>
+        <button>Learn More</button>
+      </div>
+
+      <div class="card">
+        <h3>🌐 MERN Stack</h3>
+        <p>Master MongoDB, Express, React and Node.js.</p>
+        <button>Learn More</button>
+      </div>
+
+      <div class="card">
+        <h3>🧬 Genetic Engineering</h3>
+        <p>Explore DNA technology and genetic modification basics.</p>
+        <button>Learn More</button>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FEATURES -->
+
+  <section class="features">
+
+    <h2 class="title">Platform Features</h2>
+
+    <div class="feature-box">
+
+      <div class="feature">
+        <h3>📖 Theory Notes</h3>
+        <p>Easy chapter wise explanations with downloadable notes.</p>
+      </div>
+
+      <div class="feature">
+        <h3>🎥 Video Classes</h3>
+        <p>Watch topic-wise learning videos anytime.</p>
+      </div>
+
+      <div class="feature">
+        <h3>🧠 AI Tutor</h3>
+        <p>Ask doubts and get instant AI explanations.</p>
+      </div>
+
+      <div class="feature">
+        <h3>🏆 Certificates</h3>
+        <p>Earn certificates after course completion.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    © 2026 FutureLearn | All Rights Reserved
+  </footer>
+
+</body>
+</html>
